@@ -4,7 +4,7 @@ import NewExpense from "./components/NewExpense/NewExpense";
 import { useState } from "react";
 
 const DUMMY_EXPENSES = [
-  //ovdje je u listu dodano nekoliko objekata s različitim svojstvima
+  //ovdje je u listu dodano nekoliko objekata s različitim svojstvima koje ćemo kasnije iskoristiti za renderiranje liste
   {
     id: "e1",
     title: "Toilet Paper",
@@ -33,9 +33,9 @@ const DUMMY_EXPENSES = [
 ];
 
 const App = () => {
-  const [expenses, setExpenses] = useState(DUMMY_EXPENSES);
+  const [expenses, setExpenses] = useState(DUMMY_EXPENSES); //povlačenje izvornih objekata u zadani state
 
-  const addExpenseHandler = (expense) => {
+  const addExpenseHandler = (expense) => { //update expensea
     setExpenses((previousExpense) => {
       return [expense, ...previousExpense];
     });

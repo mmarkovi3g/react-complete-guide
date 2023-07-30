@@ -1,5 +1,6 @@
 import "./ExpenseDate.css";
 
+//ovdje smo kreirali jednostavnu komponentu koja oblikuje format vremena da bude u skladu s željenim vizualnim rezultatom
 const ExpenseDate = (props) => {
   const month = props.date.toLocaleString("hr-eu", { month: "long" });
   const year = props.date.toLocaleString("en-us", { year: "numeric" });

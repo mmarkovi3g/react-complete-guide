@@ -2,6 +2,8 @@ import React, { useState } from "react";
 
 import "./ExpensesFilter.css";
 
+//jednostavan filtar kojim izmjenjujemo prikaz rezultata prema godinama objave
+
 const ExpensesFilter = (props) => {
   const yearChangeHandler = (event) => {
     props.onSaveSelectedYear(event.target.value);

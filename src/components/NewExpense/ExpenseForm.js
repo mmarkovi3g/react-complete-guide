@@ -35,7 +35,7 @@ const ExpenseForm = (props) => {
     //ovdje je argument event - kao i u gornjim funkcijama
     event.preventDefault(); //metoda koja zaustavlja defaultno ponašanje submit-a - a to je da se šalje HTTP request (defaultno se refresha stranica)
     const expenseData = {
-      //kreiranje objekta iz inputanih elemenata - oni koje
+      //kreiranje objekta iz inputanih elemenata - oni koje unosimo u formu
       title: enteredTitle,
       date: new Date(enteredDate),
       amount: enteredAmount,
@@ -46,6 +46,8 @@ const ExpenseForm = (props) => {
     setEnteredAmount("");
     setEnteredDate("");
   };
+
+  // komponennta forme
 
   return (
     <form onSubmit={submitHandler}>
